@@ -1,0 +1,17 @@
+{
+  "name": "aeroprime-worldwide",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AeroPrime Worldwide logistics operating layer",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "admin:create": "node scripts/create-admin.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.48.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}

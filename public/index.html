@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f7f4" />
+    <title>AeroPrime Worldwide | Logistics, without the loose ends.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="/" data-route="home" aria-label="AeroPrime Worldwide home">
+          <span class="brand-mark"><span></span><span></span><span></span></span>
+          <span>AEROPRIME <em>WORLDWIDE</em></span>
+        </a>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a href="/#platform" class="nav-link">Platform</a>
+          <a href="/tracking" class="nav-link" data-route="tracking">Track a package</a>
+          <a href="/#network" class="nav-link">Network</a>
+        </nav>
+        <a href="/admin" class="button button-dark button-small" data-route="admin-login">Admin portal <i data-lucide="arrow-up-right"></i></a>
+      </header>
+
+      <main id="app"></main>
+
+      <footer class="site-footer">
+        <div class="footer-brand"><span class="brand-mark"><span></span><span></span><span></span></span> AEROPRIME WORLDWIDE</div>
+        <span>One operating layer for every mile.</span>
+        <span class="footer-meta">© 2026 APW / Built for movement</span>
+      </footer>
+    </div>
+    <div id="toast" class="toast" role="status"></div>
+    <script src="/app.js"></script>
+  </body>
+</html>
