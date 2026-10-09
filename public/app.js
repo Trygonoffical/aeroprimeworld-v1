@@ -3,6 +3,29 @@ const toast = document.querySelector('#toast');
 const existingToken = localStorage.getItem('apw-token') || sessionStorage.getItem('apw-token');
 if (existingToken && !localStorage.getItem('apw-token')) localStorage.setItem('apw-token', existingToken);
 let adminAuthenticated = Boolean(existingToken);
+const menuToggle = document.querySelector('.menu-toggle');
+const primaryNavigation = document.querySelector('.primary-nav');
+
+function closeMobileMenu() {
+  primaryNavigation.classList.remove('is-open');
+  menuToggle.setAttribute('aria-expanded', 'false');
+  menuToggle.setAttribute('aria-label', 'Open navigation menu');
+  menuToggle.innerHTML = '<i data-lucide="menu"></i>';
+  iconMarkup();
+}
+
+menuToggle.addEventListener('click', (event) => {
+  event.stopPropagation();
+  const isOpen = primaryNavigation.classList.toggle('is-open');
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+  menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+  menuToggle.innerHTML = `<i data-lucide="${isOpen ? 'x' : 'menu'}"></i>`;
+  iconMarkup();
+});
+primaryNavigation.addEventListener('click', closeMobileMenu);
+document.addEventListener('click', (event) => {
+  if (!event.target.closest('.site-header')) closeMobileMenu();
+});
 
 const statusClass = (status) => status === 'Exception' ? 'exception' : status === 'Delivered' ? 'delivered' : '';
 const iconMarkup = () => { if (window.lucide) lucide.createIcons(); };

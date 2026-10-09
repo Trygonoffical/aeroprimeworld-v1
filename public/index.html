@@ -18,12 +18,15 @@
           <span class="brand-mark"><span></span><span></span><span></span></span>
           <span>AEROPRIME <em>WORLDWIDE</em></span>
         </a>
-        <nav class="primary-nav" aria-label="Primary navigation">
+        <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
           <a href="/#platform" class="nav-link">Platform</a>
           <a href="/tracking" class="nav-link" data-route="tracking">Track a package</a>
           <a href="/#network" class="nav-link">Network</a>
         </nav>
-        <a href="/admin" class="button button-dark button-small" data-route="admin-login">Admin portal <i data-lucide="arrow-up-right"></i></a>
+        <div class="header-actions">
+          <a href="/admin" class="button button-dark button-small" data-route="admin-login">Admin portal <i data-lucide="arrow-up-right"></i></a>
+          <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation"><i data-lucide="menu"></i></button>
+        </div>
       </header>
 
       <main id="app"></main>
