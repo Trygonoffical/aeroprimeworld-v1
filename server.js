@@ -75,6 +75,10 @@ async function requireAdmin(req, res, next) {
   next();
 }
 
+app.get('/api/admin/session', requireAdmin, (req, res) => {
+  res.json({ authenticated: true, email: req.user.email });
+});
+
 function shipmentPayload(body) {
   return {
     tracking_number: body.tracking_number?.trim(),
